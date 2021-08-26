@@ -1,11 +1,11 @@
 package entidades;
 
-public class Account {
+public abstract class Account {
 
-	private double balance;
+	protected double balance;
 
 	
-	public Account(double balance) {
+	protected Account(double balance) {
 		super();
 		this.balance = balance;
 	}
@@ -28,8 +28,8 @@ public class Account {
 		return result;
 	}
 
-	public boolean whitdraw( double amt) {
 
+	public boolean withdraw(double amt) {
 		boolean result=true;
 		if (amt>balance) {
 			result=false;
